@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+.main {
+    background: url("Assets/Images/bg.jpg");
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
 
 * {
     margin: 0;
