@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+}
+
+/* MAIN SECTION */
+.main {
+    background: url('Assets/Images/bg.jpg');
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.main .box {
+    height: 70vh;
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+    position: absolute;
+    top: 0;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60vw;
+    margin: auto;
+    height: 62px;
+    position: relative;
+    z-index: 10;
+}
+
+.btn {
+    padding: 5px 10px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-red {
+    background: red;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+.btn-red-sm {
+    background: red;
+    color: white;
+    border-radius: 5px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+}
+.hero span:first-child {
+    font-size: 60px;
+    font-weight: 800;
+}
+.hero span:nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+}
+.hero span:nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 5px;
+}
+.hero-buttons input {
+    padding: 10px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 4px;
+}
+
+/* SEPARATION */
+.separation {
+    height: 5px;
+    background: rgba(128,128,128,0.25);
+    width: 100%;
+}
+
+/* CONTENT SECTIONS */
+.first, .second {
+    display: flex;
+    max-width: 70vw;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.first div:first-child,
+.second div:last-child {
+    width: 50%;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.secImg {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.secImg img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* FAQ */
+.faqs h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 32px;
+}
+.faqbox {
+    background: rgb(70,70,70);
+    padding: 20px;
+    max-width: 65vw;
+    margin: 10px auto;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.faqbox:hover {
+    background: rgb(40,40,40);
+    transition: 0.3s;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 40px 0;
+    background: black;
+}
+.footer-container {
+    max-width: 70vw;
+    margin: auto;
+}
+.footer-email p {
+    margin-bottom: 10px;
+}
+.footer-email-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.footer-email-box input {
+    padding: 12px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 4px;
+    width: 280px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-item a {
+    color: rgba(200,200,200,0.9);
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-lang {
+    padding: 6px 20px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.footer-country {
+    margin-top: 10px;
+    color: rgba(200,200,200,0.8);
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero span:first-child { font-size: 38px; }
+    .hero span:nth-child(2) { font-size: 18px; }
+
+    .first, .second {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .first div:first-child,
+    .second div:last-child {
+        width: 90%;
+    }
+
+    .secImg { width: 90%; }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
